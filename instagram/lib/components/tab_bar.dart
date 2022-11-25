@@ -56,7 +56,7 @@ class _ProfileTabBarState extends State<ProfileTabBar>
             itemBuilder: (context, index) {
               return Image.asset("${tabView[index].backgroundImage}");
             },
-          itemCount: 40,
+          itemCount: 6,
             ),
             Container(
               color: Colors.red,

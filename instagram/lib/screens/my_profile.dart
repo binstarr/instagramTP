@@ -27,23 +27,26 @@ class _MyProfileState extends State<MyProfile> {
   AppBar _buildProfileAppBar() {
     return AppBar(
       backgroundColor: Colors.white,
-      title: Text(
-        "bin__starr",
-        style: TextStyle(
-            fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
-      ),
-      actions: [
-        InkWell(
-          onTap: () => print("클릭"),
-          child: SizedBox(
-            width: 20,
-            height: 20,
-            child: CircleAvatar(
-              backgroundColor: Colors.red,
-              child: Text("..."),
+      title: Row(
+        children: [Text(
+          "bin__starr",
+          style: TextStyle(
+              fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
+        ),
+          InkWell(
+            onTap: () => print("클릭"),
+            child: SizedBox(
+              width: 20,
+              height: 20,
+              child: CircleAvatar(
+                backgroundColor: Colors.red,
+                child: Text("..."),
+              ),
             ),
           ),
-        ),
+        ]),
+      actions: [
+
         SizedBox(
           width: 132,
         ),
