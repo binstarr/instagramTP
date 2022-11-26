@@ -14,10 +14,10 @@ class ShopItemScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _appbar(),
-      body: Column(
+      body: ListView(
         children: [
           Divider(thickness: 1),
-          ShoppingListDetail(),
+          ShoppingListDetail(shopNum: selectedNum),
         ],
       ),
     );

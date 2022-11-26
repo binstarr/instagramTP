@@ -22,7 +22,7 @@ class ShoppoingList extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ShopItemScreen(selectedNum: _selecteditem,)));
+                              builder: (context) => ShopItemScreen(selectedNum: _selecteditem)));
                       _selecteditem = item;
                       print(_selecteditem);
                     },
