@@ -5,7 +5,7 @@ import 'package:instagram/main.dart';
 
 import 'package:instagram/screens/home_screen.dart';
 import 'package:instagram/screens/my_profile.dart';
-
+import 'package:instagram/screens/shop_main_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -16,16 +16,17 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: IndexedStack(
         index: _selectedIndex,
         children: [
-              HomeScreen(dm: "2"),
-              // 지은
-              //승원
-              MyProfile(),
+          HomeScreen(dm: "2"),
+          //승원
+          ShopMainScreen(),
+          MyProfile(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -34,16 +35,24 @@ class _MainScreenState extends State<MainScreen> {
         currentIndex: _selectedIndex,
         unselectedItemColor: Colors.black54,
         selectedItemColor: Colors.black,
-        onTap: (index){
+        onTap: (index) {
           setState(() {
             _selectedIndex = index;
           });
         },
         items: [
           BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.home), label: ""),
-          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.search), label:""),
-          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.shoppingBag),label: ""),
-          BottomNavigationBarItem(icon: CircleImage(img: MyApp.me.img,width: 30, height: 30,), label: ""),
+          BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.search), label: ""),
+          BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.shoppingBag), label: ""),
+          BottomNavigationBarItem(
+              icon: CircleImage(
+                img: MyApp.me.img,
+                width: 30,
+                height: 30,
+              ),
+              label: ""),
         ],
       ),
     );
