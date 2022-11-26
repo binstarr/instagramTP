@@ -65,6 +65,7 @@ flutter:
     - assets/
     - assets/shop_img/
     - assets/shop_list_img/
+    - assets/search_img/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

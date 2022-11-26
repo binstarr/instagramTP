@@ -5,6 +5,7 @@ import 'package:instagram/main.dart';
 
 import 'package:instagram/screens/home_screen.dart';
 import 'package:instagram/screens/my_profile.dart';
+import 'package:instagram/screens/search_screen.dart';
 import 'package:instagram/screens/shop_main_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -24,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
         index: _selectedIndex,
         children: [
           HomeScreen(dm: "2"),
-          //승원
+          SearchScreen(),
           ShopMainScreen(),
           MyProfile(),
         ],
