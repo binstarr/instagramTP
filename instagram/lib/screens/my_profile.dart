@@ -3,9 +3,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:instagram/components/profile_info.dart';
 import 'package:instagram/components/tab_bar.dart';
 
-class MyProfile extends StatefulWidget {
-  const MyProfile({Key? key}) : super(key: key);
+import '../model/user_info.dart';
 
+class MyProfile extends StatefulWidget {
+  MyProfile({Key? key, required this.user}) : super(key: key);
+  User user;
   @override
   State<MyProfile> createState() => _MyProfileState();
 }
@@ -14,61 +16,59 @@ class _MyProfileState extends State<MyProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: _buildProfileAppBar(),
       body: Column(
-        children: const [
-          ProfileInfo(),
-          Expanded(child: ProfileTabBar())
+        children: [
+          ProfileInfo(profileImg: widget.user.profileimgs,
+            follower: widget.user.follower,
+            following: widget.user.following,
+            name: widget.user.name,),
+          Expanded(child: ProfileTabBar(user: widget.user,))
         ],
       ),
-
     );
   }
 
   AppBar _buildProfileAppBar() {
     return AppBar(
       backgroundColor: Colors.white,
-      title: Row(children: [
-        Text(
-          "bin__starr",
-          style: TextStyle(
-              fontSize: 23, fontWeight: FontWeight.bold, color: Colors.black),
-        ),
-        SizedBox(width: 7),
-        Container(
-          alignment: AlignmentDirectional.center,
-          width: 23,
-          height: 20,
-          decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Text(
-            "···",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 13,
+      title: Row(
+          children: [SizedBox(
+            child: Text(
+              super.widget.user.name,
+              style: TextStyle(
+                  fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
             ),
           ),
-        ),
-      ]),
+            InkWell(
+              onTap: () => print("클릭"),
+              child: SizedBox(
+                width: 20,
+                height: 20,
+                child: CircleAvatar(
+                  backgroundColor: Colors.red,
+                  child: Text("..."),
+                ),
+              ),
+            ),
+          ]),
       actions: [
-        IconButton(
-          onPressed: () {},
-          icon: Icon(
-            FontAwesomeIcons.plusSquare,
-            color: Colors.black,
-          ),
+
+        SizedBox(
+          width: 132,
         ),
         IconButton(
-          onPressed: () {},
-          icon: Icon(
-            FontAwesomeIcons.bars,
-            color: Colors.black,
-          ),
+          onPressed: () {
+
+          },
+          icon: Icon(FontAwesomeIcons.plusSquare, color: Colors.black,),
+        ),
+        IconButton(
+          onPressed: () {
+
+          },
+          icon: Icon(FontAwesomeIcons.bars, color: Colors.black,),
+
         )
       ],
     );

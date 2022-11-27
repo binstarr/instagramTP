@@ -7,11 +7,14 @@ import 'package:instagram/main.dart';
 import 'package:intl/intl.dart';
 
 
+import '../constrants.dart';
+import '../model/user_info.dart';
+import '../screens/my_profile.dart';
 import 'my_comment.dart';
 
 class ListCard extends StatefulWidget {
-  ListCard({Key? key, required this.img, required this.name, required this.mainImg, required this.likes, required this.content, required this.time}) : super(key: key);
-  String img;
+  ListCard({Key? key, required this.profileimg, required this.name, required this.mainImg, required this.likes, required this.content, required this.time}) : super(key: key);
+  String profileimg;
   String name;
   String mainImg;
   int likes;
@@ -65,10 +68,56 @@ class ListCardState extends State<ListCard> {
   _firstRow(){
     return Row(
       children: [
-        Padding(
-            padding: EdgeInsets.all(10.0),
-            child: CircleImage(img: widget.img, width: 30, height: 30)),
-        Text(widget.name, style: TextStyle(fontWeight: FontWeight.bold)),
+        InkWell(
+          onTap: () {
+            if(widget.name == "binstar") {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) =>
+                  MyProfile(user: user[2])));
+            }else  if(widget.name == "jieun") {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) =>
+                  MyProfile(user: user[1])));
+            }else if(widget.name == "swlee") {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) =>
+                  MyProfile(user: user[3])));
+            }else if(widget.name == "1000bang") {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) =>
+                  MyProfile(user: user[0])));
+            }
+          },
+
+          child: Padding(
+              padding: EdgeInsets.all(10.0),
+              child: CircleImage(img: widget.profileimg, width: 30, height: 30)),
+        ),
+        InkWell(
+            onTap: (){
+              if(widget.name == "binstar") {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) =>
+                    MyProfile(user: user[2])));
+              }else  if(widget.name == "jieun") {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) =>
+                    MyProfile(user: user[1])));
+              }else if(widget.name == "swlee") {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) =>
+                    MyProfile(user: user[3])));
+              }else if(widget.name == "1000bang") {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) =>
+                    MyProfile(user: user[0])));
+              }
+
+
+            },
+
+
+            child: Text(widget.name, style: TextStyle(fontWeight: FontWeight.bold))),
         Spacer(),
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -144,7 +193,7 @@ class ListCardState extends State<ListCard> {
       padding: EdgeInsets.symmetric(horizontal: 10 ),
       child: Row(
         children: [
-          CircleImage(img: MyApp.me.img, width: 25, height: 25),
+          CircleImage(img: MyApp.me.profileimgs, width: 25, height: 25),
           SizedBox(width: 10,),
           InkWell(
               onTap: (){

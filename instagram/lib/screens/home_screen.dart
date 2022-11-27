@@ -24,9 +24,9 @@ class _HomeScreenState extends State<HomeScreen> {
         leading: Image.network("${urlPrefix1}insta.png", width: 120,),
         actions: [
           Icon(FontAwesomeIcons.squarePlus),
-          SizedBox(width: 20),
+          SizedBox(width: 10,),
           Icon(FontAwesomeIcons.heart),
-          SizedBox(width: 20),
+          SizedBox(width: 10,),
           Stack(
             children: [
               Center(
@@ -57,9 +57,12 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 115,
               child: StoryList()),
           Divider(),
-          ListCard(img: user[1].img, name: user[1].name, mainImg: user[1].img, likes: 20, content: "쏠 수 있어~~",time: "1", ),
-          ListCard(img: user[3].img, name: user[3].name, mainImg: user[2].img, likes: 20, content: "내가 고라니 ",time: "2", ),
-          ListCard(img: user[4].img, name: user[4].name, mainImg: user[3].img, likes: 20, content: "드루와~~", time: "3", ),
+          ListCard(profileimg: user[1].profileimgs, name: user[1].name, mainImg: user[1].imgs[1].image, likes: 344, content: "쏠 수 있어~~",time: "1", ),
+          ListCard(profileimg: user[2].profileimgs, name: user[2].name, mainImg: user[2].imgs[1].image, likes: 124, content: "김정식 나이스 ",time: "2", ),
+          ListCard(profileimg: user[3].profileimgs, name: user[3].name, mainImg: user[3].imgs[0].image, likes: 34, content: "드루와~~", time: "3", ),
+          ListCard(profileimg: user[0].profileimgs, name: user[0].name, mainImg: user[0].imgs[0].image, likes: 55555, content: "골 넣고 ㅎㅎ", time: "3", ),
+          ListCard(profileimg: user[3].profileimgs, name: user[3].name, mainImg: user[3].imgs[1].image, likes: 34, content: "담배한대 괜차", time: "3", ),
+          ListCard(profileimg: user[2].profileimgs, name: user[2].name, mainImg: user[2].imgs[3].image, likes: 1234, content: "핫바 사러가는 길 ",time: "2", ),
 
         ],
       ),);

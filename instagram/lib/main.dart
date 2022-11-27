@@ -11,7 +11,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-  static User me = User(name: "1000bang", follower: "100", following: "102", dm: "0", img: "${urlPrefix1}son.gif");
+  static User me = User(name: "1000bang", follower: "100", following: "102", dm: "0", profileimgs: "${urlPrefix1}son.gif"
+  ,imgs: bangList);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

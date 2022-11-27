@@ -144,7 +144,7 @@ class ListCardState extends State<ListCard2> {
       padding: EdgeInsets.symmetric(horizontal: 10 ),
       child: Row(
         children: [
-          CircleImage(img: MyApp.me.img, width: 25, height: 25),
+          CircleImage(img: MyApp.me.profileimgs, width: 25, height: 25),
           SizedBox(width: 10,),
           InkWell(
               onTap: (){

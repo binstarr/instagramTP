@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:instagram/components/circle_Image.dart';
 import 'package:instagram/main.dart';
+import 'package:instagram/model/user_info.dart';
 
 import 'package:instagram/screens/home_screen.dart';
 import 'package:instagram/screens/my_profile.dart';
 import 'package:instagram/screens/search_screen.dart';
 import 'package:instagram/screens/shop_main_screen.dart';
+
+import '../constrants.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -27,16 +30,16 @@ class _MainScreenState extends State<MainScreen> {
           HomeScreen(dm: "2"),
           SearchScreen(),
           ShopMainScreen(),
-          MyProfile(),
+          MyProfile(user: user[1]),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed ,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         currentIndex: _selectedIndex,
         unselectedItemColor: Colors.black54,
         selectedItemColor: Colors.black,
+        type: BottomNavigationBarType.fixed,
         onTap: (index) {
           setState(() {
             _selectedIndex = index;
@@ -50,7 +53,7 @@ class _MainScreenState extends State<MainScreen> {
               icon: Icon(FontAwesomeIcons.shoppingBag), label: ""),
           BottomNavigationBarItem(
               icon: CircleImage(
-                img: MyApp.me.img,
+                img: MyApp.me.profileimgs,
                 width: 30,
                 height: 30,
               ),
