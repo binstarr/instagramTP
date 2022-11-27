@@ -5,7 +5,12 @@ import 'package:instagram/components/profile_page_story.dart';
 import 'package:instagram/components/tab_bar.dart';
 
 class ProfileInfo extends StatelessWidget {
-  const ProfileInfo({Key? key}) : super(key: key);
+  ProfileInfo({Key? key, required this.profileImg, required this.follower, required this.following, required this.name
+  }) : super(key: key);
+  String profileImg;
+  String follower;
+  String following;
+  String name;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +49,7 @@ class ProfileInfo extends StatelessWidget {
           width: 80,
           height: 80,
           child: CircleAvatar(
-            backgroundImage: AssetImage("assets/myProfile.jpg"),
+            backgroundImage: NetworkImage(profileImg),
           ),
         ),
         Positioned(
@@ -83,7 +88,7 @@ class ProfileInfo extends StatelessWidget {
           Column(
             children: [
               Text(
-                "700",
+                follower,
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               Text(
@@ -98,7 +103,7 @@ class ProfileInfo extends StatelessWidget {
           Column(
             children: [
               Text(
-                "361",
+                following,
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               Text(
@@ -119,7 +124,7 @@ class ProfileInfo extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("myName"),
+            Text(name),
             SizedBox(
               height: 5,
             ),

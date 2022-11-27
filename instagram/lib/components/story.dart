@@ -38,7 +38,7 @@ class StoryList extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(2),
                         child: CircleImage(
-                            img: user[index].img, width: 55, height: 55),
+                            img: user[index].profileimgs, width: 55, height: 55),
                       ),
                     )),
                 SizedBox(

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:instagram/model/user.dart';
 import 'package:instagram/screens/profile_into_screen.dart';
 
-class ProfileTabBar extends StatefulWidget {
-  const ProfileTabBar({Key? key}) : super(key: key);
+import '../model/user_info.dart';
 
+class ProfileTabBar extends StatefulWidget {
+  ProfileTabBar({Key? key, required this.user}) : super(key: key);
+  User user;
   @override
   State<ProfileTabBar> createState() => _ProfileTabBarState();
 }
@@ -54,7 +55,9 @@ class _ProfileTabBarState extends State<ProfileTabBar>
             InkWell(
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) =>ProfileIntoScreen(),));
+                    context, MaterialPageRoute(builder: (context) =>ProfileIntoScreen(
+                  name: widget.user.name, profileimg: widget.user.profileimgs, imgs: widget.user.imgs,
+                ),));
               },
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -62,9 +65,9 @@ class _ProfileTabBarState extends State<ProfileTabBar>
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10),
                 itemBuilder: (context, index) {
-                  return Image.asset("${tabView[index].backgroundImage}");
+                  return Image.network("${widget.user.imgs[index].image}");
                 },
-                itemCount: 6,
+                itemCount: 4,
               ),
             ),
             Container(
