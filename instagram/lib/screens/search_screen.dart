@@ -24,7 +24,7 @@ class SearchScreen extends StatelessWidget {
 
   Widget _buildSearchFiled() {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      padding: EdgeInsets.symmetric(horizontal: 10.0),
       child: TextField(
         decoration: InputDecoration(
             filled: true,

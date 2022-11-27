@@ -17,8 +17,12 @@ class _MyProfileState extends State<MyProfile> {
       backgroundColor: Colors.white,
       appBar: _buildProfileAppBar(),
       body: Column(
-        children: [ProfileInfo(), Expanded(child: ProfileTabBar())],
+        children: const [
+          ProfileInfo(),
+          Expanded(child: ProfileTabBar())
+        ],
       ),
+
     );
   }
 
@@ -37,16 +41,18 @@ class _MyProfileState extends State<MyProfile> {
           width: 23,
           height: 20,
           decoration: BoxDecoration(
-          color: Colors.red,
-        borderRadius: BorderRadius.circular(20),
-        ),
-          child: Text("···",
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Text(
+            "···",
             textAlign: TextAlign.center,
             style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
               fontSize: 13,
-          ),),
+            ),
+          ),
         ),
       ]),
       actions: [
