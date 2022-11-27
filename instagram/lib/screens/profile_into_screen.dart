@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:instagram/components/list_card.dart';
+import 'package:instagram/components/list_card2.dart';
 import 'package:instagram/model/user_ex.dart';
 
 import '../components/story.dart';
@@ -25,7 +26,7 @@ class _ProfileIntoScreen extends State<ProfileIntoScreen> {
       body: ListView(
         children: [
           Divider(),
-          ListCard(
+          ListCard2(
             img: myList[1].img,
             name: myList[1].name,
             mainImg: myList[1].img,
@@ -33,7 +34,7 @@ class _ProfileIntoScreen extends State<ProfileIntoScreen> {
             content: "가족여행",
             time: "1",
           ),
-          ListCard(
+          ListCard2(
             img: myList[3].img,
             name: myList[3].name,
             mainImg: myList[2].img,
@@ -41,7 +42,7 @@ class _ProfileIntoScreen extends State<ProfileIntoScreen> {
             content: "우정여행 ",
             time: "2",
           ),
-          ListCard(
+          ListCard2(
             img: myList[4].img,
             name: myList[4].name,
             mainImg: myList[3].img,
