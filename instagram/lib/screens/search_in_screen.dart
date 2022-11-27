@@ -50,8 +50,10 @@ class SearchInScreen extends StatelessWidget {
             SizedBox(width: 10,),
             Text(
               searchImgLists[selectedNum].id,
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 16),
             ),
+            SizedBox(width: 4,),
+            Icon(Icons.check_circle, color: Colors.blue, size: 12),
             Spacer(),
             Container(
               height: 36,
