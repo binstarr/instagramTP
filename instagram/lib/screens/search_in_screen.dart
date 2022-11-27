@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:instagram/model/search_img_list.dart';
 
 import '../components/circle_Image.dart';
 
@@ -10,11 +11,16 @@ class SearchInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: _appBar(),
       body: Column(
         children: [
-          Divider(thickness: 1, color: Colors.red),
+          Divider(thickness: 1, color: Color(0xFFefefef)),
+          // SizedBox(height: 10,),
           _searchInpage(),
+          SizedBox(
+            height: 10,
+          ),
           _searchInScreenImage(),
           _searchInScreenBottom(),
         ],
@@ -39,8 +45,11 @@ class SearchInScreen extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            SizedBox(width: 10,),
+            CircleAvatar(radius: 18,backgroundImage: AssetImage(searchImgLists[selectedNum].circleImg),),
+            SizedBox(width: 10,),
             Text(
-              "아이디들어올곳",
+              searchImgLists[selectedNum].id,
               style: TextStyle(fontSize: 20),
             ),
             Spacer(),
@@ -77,7 +86,7 @@ class SearchInScreen extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 400,
-      color: Colors.black,
+      child: Image.asset(searchImgLists[selectedNum].searchImg),
     );
   }
 
@@ -91,55 +100,42 @@ class SearchInScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Icon(Icons.favorite_border),
-              SizedBox(
-                width: 10,
-              ),
+              SizedBox(width: 10),
               Icon(
                 FontAwesomeIcons.comment,
                 size: 20,
               ),
-              SizedBox(
-                width: 10,
-              ),
+              SizedBox(width: 10),
               Icon(
                 FontAwesomeIcons.paperPlane,
                 size: 20,
               ),
               Spacer(),
-              Icon(
-                FontAwesomeIcons.bookmark,
-                size: 20,
-              ),
+              Icon(FontAwesomeIcons.bookmark, size: 20),
             ],
           ),
-          SizedBox(
-            height: 10,
-          ),
+          SizedBox(height: 10),
           Row(
             children: [
-              Text("좋아요 99999999999999999999999999999999999999999개"),
+              Text("좋아요 ${searchImgLists[selectedNum].like}개", style: TextStyle(fontWeight: FontWeight.bold),),
             ],
           ),
           Row(
             children: [
-              Text("Ronaldo7", style: TextStyle(fontWeight: FontWeight.bold)),
+              Text("${searchImgLists[selectedNum].id}", style: TextStyle(fontWeight: FontWeight.bold)),
               SizedBox(width: 10),
-              Text("what ? lee DDongGGuk? What the....Hell!"),
+              Text("${searchImgLists[selectedNum].text}"),
               SizedBox(width: 10),
               Text("더 보기", style: TextStyle(color: Colors.grey)),
             ],
           ),
           Row(
             children: [
-              Text("댓글 999...개 모두 보기"),
+              Text("댓글 ${searchImgLists[selectedNum].coment}개 모두 보기"),
             ],
           ),
           Row(
-            children: [
-              Text("9시간 전"),
-              Text("."),
-              Text("Instagram 추천")
-            ],
+            children: [Text("${searchImgLists[selectedNum].time} · Instagram 추천", style: TextStyle(color: Colors.grey),)],
           ),
         ],
       ),

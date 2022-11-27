@@ -9,7 +9,7 @@ class SearchList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int _seletedimg = 0;
+    int seletedimgNum = 0;
     return GridView.count(
       crossAxisCount: 3,
       children: List.generate(
@@ -18,17 +18,17 @@ class SearchList extends StatelessWidget {
           children: [
               InkWell(
                 onTap: () {
-                  print("$context 눌러짐");
+                  print("$seletedimgNum 눌러짐");
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => SearchInScreen(
-                        selectedNum: _seletedimg,
+                        selectedNum: seletedimgNum,
                       ),
                     ),
                   );
-                  _seletedimg = index;
-                  print(_seletedimg);
+                  seletedimgNum = index;
+                  print(seletedimgNum);
                 },
                 child: Container(
                   decoration: BoxDecoration(
