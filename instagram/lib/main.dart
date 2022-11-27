@@ -26,9 +26,9 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(color: Colors.black87),
         ),
       ),
-      home: LoginScreen(),
-
-      // LoadingScreen(),
+      home:
+     // LoadingScreen(),
+      LoginScreen(),
     );
   }
 }
