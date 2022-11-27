@@ -22,7 +22,7 @@ class LoginScreen extends StatelessWidget {
               Container(
                   alignment: Alignment.topRight,
                   child: IconButton(
-                    onPressed: (){},
+                    onPressed: () {},
                     icon: Icon(
                       FontAwesomeIcons.close,
                       size: 30,
@@ -51,39 +51,38 @@ class LoginScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               InkWell(
-                onTap: (){
-                  if(idcontroller.text == "1000bang"){
+                onTap: () {
+                  if (idcontroller.text == user[0].name) {
                     MyApp.me = user[0];
-                    Navigator.push(
-                    context, MaterialPageRoute(builder: (context) =>
-                  MainScreen()));
-                  } else if(idcontroller.text == "jieun"){
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MainScreen()));
+                  } else if (idcontroller.text == user[1].name) {
                     MyApp.me = user[1];
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (context) =>
-                        MainScreen()));
-                  }else if(idcontroller.text == "binstar"){
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MainScreen()));
+                  } else if (idcontroller.text == user[2].name) {
                     MyApp.me = user[2];
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (context) =>
-                        MainScreen()));
-                  }else if(idcontroller.text == "swlee"){
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MainScreen()));
+                  } else if (idcontroller.text == user[3].name) {
                     MyApp.me = user[3];
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (context) =>
-                        MainScreen()));
-                  }else{
-                    showDialog(context: context, builder: (BuildContext cont){
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MainScreen()));
+                  } else {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext cont) {
                           return AlertDialog(
                             content: Text("아이디와 비밀번호를 확인하세요"),
                             actions: [
-                              TextButton(onPressed: (){
-                                Navigator.of(context).pop();
-
-                              }, child: Text("확인"))
+                              TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text("확인"))
                             ],
                           );
-                    });
+                        });
                   }
                 },
                 child: Padding(
@@ -93,12 +92,15 @@ class LoginScreen extends StatelessWidget {
                     width: double.infinity,
                     height: 40,
                     decoration: BoxDecoration(
-                    color: Colors.blue,
+                      color: Colors.blue,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text("로그인", style: TextStyle(color: Colors.white,
-                    fontWeight: FontWeight.bold, fontSize: 15),
-                    textAlign: TextAlign.center),
+                    child: Text("로그인",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15),
+                        textAlign: TextAlign.center),
                   ),
                 ),
               )
@@ -119,6 +121,11 @@ class LoginScreen extends StatelessWidget {
             fillColor: Color(0xFFefefef),
             border: InputBorder.none,
             enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+                borderSide: BorderSide(color: Colors.grey)),
+            focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.all(
                   Radius.circular(10),
                 ),

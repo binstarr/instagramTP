@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     UploadScreen()));
               },
               child: Icon(FontAwesomeIcons.squarePlus)),
-          SizedBox(width: 10,),
+          SizedBox(width: 17),
           InkWell(
               onTap: (){
                 Navigator.push(
@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ActiveScreen()));
               },
               child: Icon(FontAwesomeIcons.heart)),
-          SizedBox(width: 10,),
+          SizedBox(width: 17),
           InkWell(
             onTap: (){
               Navigator.push(

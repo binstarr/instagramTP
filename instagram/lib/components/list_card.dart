@@ -50,7 +50,7 @@ class ListCardState extends State<ListCard> {
           Center(
               child: Image.network(
             widget.mainImg,
-            fit: BoxFit.contain,
+            fit: BoxFit.fill,
           )),
           _secondRow(0),
           Padding(
@@ -145,7 +145,7 @@ class ListCardState extends State<ListCard> {
         Spacer(),
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Icon(FontAwesomeIcons.ellipsisVertical),
+          child: Icon(FontAwesomeIcons.ellipsis),
         ),
       ],
     );
@@ -161,7 +161,7 @@ class ListCardState extends State<ListCard> {
               setState(() {
                 print("하트눌러짐");
                 if (alreadySaved == 0) {
-                  print("$alreadySaved 빨간하트로 변경되랏");
+                  print("$alreadySaved 빨간하트로 변경");
                   alreadySaved = 1;
                   widget.likes + 1;
                 } else {
@@ -241,6 +241,7 @@ class ListCardState extends State<ListCard> {
           Icon(
             FontAwesomeIcons.solidHeart,
             color: Colors.red,
+            size: 18,
           ),
           SizedBox(
             width: 10,
@@ -248,6 +249,7 @@ class ListCardState extends State<ListCard> {
           Icon(
             FontAwesomeIcons.handsClapping,
             color: Colors.yellow,
+            size: 18,
           )
         ],
       ),

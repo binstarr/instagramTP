@@ -10,14 +10,15 @@ class StoryList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
         scrollDirection: Axis.horizontal,
-        children: List.generate(
+        children:
+        List.generate(
           user.length,
           (index) => Padding(
             padding: const EdgeInsets.only(top: 10, left: 5, right: 5),
             child: Column(
               children: [
                 Container(
-                    padding: EdgeInsets.all(2.5),
+                    padding: EdgeInsets.all(3),
                     decoration: BoxDecoration(
                       gradient: const LinearGradient(
                         begin: Alignment.bottomRight,

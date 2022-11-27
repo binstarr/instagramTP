@@ -17,7 +17,19 @@ class _ProfileIntoScreen extends State<ProfileIntoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("${widget.name} 님의 게시물"),
+        title: Column(
+          children: [
+            Text("${widget.name} ", style: TextStyle(
+              fontSize: 12,
+              color: Colors.grey,
+            ),),
+            SizedBox(height: 3,),
+            Text("게시물", style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 13,
+            ),),
+          ],
+        ),
         centerTitle: true,
       ),
       body: ListView(

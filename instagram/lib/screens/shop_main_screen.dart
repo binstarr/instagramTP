@@ -49,13 +49,60 @@ class ShopMainScreen extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            showDefaultHeightModalBottomSheet(context);
+          },
           icon: Icon(
             FontAwesomeIcons.bars,
             color: Colors.black,
           ),
         ),
       ],
+    );
+  }
+
+  void showDefaultHeightModalBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return SizedBox(
+          height: MediaQuery.of(context).size.height * 0.3,
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+              color: Colors.white,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 30),
+                  Text("회원님의 계정",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  SizedBox(height: 25),
+                  Row(children: [
+                    Icon(FontAwesomeIcons.bell),
+                    SizedBox(width: 10),
+                    Text("쇼핑 활동"),
+                  ],),
+                  Divider(thickness: 1.5),
+                  SizedBox(height: 10),
+                  Text("Instagram Shop",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17,
+                    ),),
+                  SizedBox(height: 15),
+                  Text("동영상"),
+                ],
+              ),
+            ),
+          )
+        );
+      },
     );
   }
 

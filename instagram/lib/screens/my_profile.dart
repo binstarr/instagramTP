@@ -18,6 +18,7 @@ class _MyProfileState extends State<MyProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: _buildProfileAppBar(),
       body: Column(
         children: [
@@ -41,6 +42,8 @@ class _MyProfileState extends State<MyProfile> {
         padding: const EdgeInsets.symmetric(horizontal: 12.0),
         child: Row(
             children: [
+              Icon(Icons.lock_open_rounded),
+               SizedBox(width: 10),
                Text(
                 super.widget.user.name,
                 style: TextStyle(

@@ -50,7 +50,8 @@ List<User> user = [
   User(name: "jieun", follower: "1K", following: "3333", dm: "0", profileimgs: "${urlPrefix1}정마담.png", imgs: jieunList),
   User(name: "binstar", follower: "3K", following: "1234", dm: "0", profileimgs: "${urlPrefix1}하정우.jpeg", imgs: binList),
   User(name: "swlee", follower: "2K", following: "88", dm: "0", profileimgs: "${urlPrefix1}정청_1.jpeg", imgs: swList),
-  User(name: "swlee", follower: "100", following: "102", dm: "0", profileimgs: "${urlPrefix1}정청_1.jpeg", imgs: swList),
-  User(name: "swlee", follower: "100", following: "102", dm: "0", profileimgs: "${urlPrefix1}정청_1.jpeg", imgs: swList),
-  User(name: "swlee", follower: "100", following: "102", dm: "0", profileimgs: "${urlPrefix1}정청_1.jpeg", imgs: swList),
+  User(name: "1000bang", follower: "3M", following: "102", dm: "0", profileimgs: "${urlPrefix1}손흥민_2.jpeg", imgs: bangList ),
+  User(name: "jieun", follower: "1K", following: "3333", dm: "0", profileimgs: "${urlPrefix1}정마담_2.jpeg", imgs: jieunList),
+  User(name: "binstar", follower: "3K", following: "1234", dm: "0", profileimgs: "${urlPrefix1}하정우_2.jpeg", imgs: binList),
+  User(name: "swlee", follower: "2K", following: "88", dm: "0", profileimgs: "${urlPrefix1}정청_2.jpeg", imgs: swList),
 ];

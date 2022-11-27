@@ -32,7 +32,7 @@ class ProfileInfo extends StatelessWidget {
           ProfileFixButton(),
           SizedBox(
               height: 100,
-              child: StoryList()),
+              child: StoryList(userName: name)),
 
 
 
@@ -56,7 +56,12 @@ class ProfileInfo extends StatelessWidget {
             left: 40,
             child: IconButton(
               onPressed: () {},
-              icon: Icon(FontAwesomeIcons.circlePlus, color: Colors.blueAccent),
+              icon: Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(100),
+                ),
+                  child: Icon(FontAwesomeIcons.circlePlus, color: Colors.blueAccent)),
               color: Colors.blue,
               iconSize: 20,
             ))
@@ -66,13 +71,13 @@ class ProfileInfo extends StatelessWidget {
 
   Widget _profileInfo() {
     return Padding(
-      padding: const EdgeInsets.only(top: 30),
+      padding: const EdgeInsets.only(top: 30, left: 40),
       child: Row(
         children: [
           Column(
             children: [
               Text(
-                "6",
+                "4",
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
               Text(
@@ -123,11 +128,14 @@ class ProfileInfo extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(name),
+            Text(name, style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 15,
+            ),),
             SizedBox(
               height: 5,
             ),
-            Text("title"),
+            Text("자기 소개 : title"),
           ],
         ),
       ],

@@ -12,12 +12,14 @@ class ProfileFixButton extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         width: 400,
-        height: 45,
+        height: 35,
         decoration: BoxDecoration(
-            color: Colors.grey, borderRadius: BorderRadius.circular(10)),
+            color: Color.fromRGBO(200, 200, 200, 1.0),
+            borderRadius: BorderRadius.circular(10)),
         child: Text(
           "프로필 편집",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,
+          fontSize: 12),
         ),
       ),
     );
