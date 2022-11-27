@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:instagram/screens/shop_wishList_screen.dart';
 import '../components/shopping_list.dart';
 
 class ShopMainScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class ShopMainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _appbar(),
+      appBar: _appbar(context),
       body: Column(
         children: [
           _buildSearchFiled(),
@@ -19,7 +20,7 @@ class ShopMainScreen extends StatelessWidget {
     );
   }
 
-  AppBar _appbar() {
+  AppBar _appbar(BuildContext context) {
     return AppBar(
       elevation: 0.0,
       backgroundColor: Colors.white,
@@ -33,7 +34,11 @@ class ShopMainScreen extends StatelessWidget {
       ),
       actions: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return ShopWishListScreen();
+            }));
+          },
           icon: Icon(
             FontAwesomeIcons.calendar,
             color: Colors.black,

@@ -14,54 +14,61 @@ class _MyProfileState extends State<MyProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: _buildProfileAppBar(),
       body: Column(
-          children: [
-            ProfileInfo(),
-            Expanded(child: ProfileTabBar())
-          ],
+        children: const [
+          ProfileInfo(),
+          Expanded(child: ProfileTabBar())
+        ],
       ),
+
     );
   }
 
   AppBar _buildProfileAppBar() {
     return AppBar(
       backgroundColor: Colors.white,
-      title: Row(
-        children: [Text(
+      title: Row(children: [
+        Text(
           "bin__starr",
           style: TextStyle(
-              fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
+              fontSize: 23, fontWeight: FontWeight.bold, color: Colors.black),
         ),
-          InkWell(
-            onTap: () => print("클릭"),
-            child: SizedBox(
-              width: 20,
-              height: 20,
-              child: CircleAvatar(
-                backgroundColor: Colors.red,
-                child: Text("..."),
-              ),
+        SizedBox(width: 7),
+        Container(
+          alignment: AlignmentDirectional.center,
+          width: 23,
+          height: 20,
+          decoration: BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Text(
+            "···",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 13,
             ),
           ),
-        ]),
+        ),
+      ]),
       actions: [
-
-        SizedBox(
-          width: 132,
+        IconButton(
+          onPressed: () {},
+          icon: Icon(
+            FontAwesomeIcons.plusSquare,
+            color: Colors.black,
+          ),
         ),
         IconButton(
-          onPressed: () {
-
-          },
-          icon: Icon(FontAwesomeIcons.plusSquare, color: Colors.black,),
-        ),
-        IconButton(
-          onPressed: () {
-
-          },
-          icon: Icon(FontAwesomeIcons.bars, color: Colors.black,),
-
+          onPressed: () {},
+          icon: Icon(
+            FontAwesomeIcons.bars,
+            color: Colors.black,
+          ),
         )
       ],
     );
