@@ -24,9 +24,9 @@ class _HomeScreenState extends State<HomeScreen> {
         leading: Image.network("${urlPrefix1}insta.png", width: 120,),
         actions: [
           Icon(FontAwesomeIcons.squarePlus),
-          SizedBox(width: 10,),
+          SizedBox(width: 20),
           Icon(FontAwesomeIcons.heart),
-          SizedBox(width: 10,),
+          SizedBox(width: 20),
           Stack(
             children: [
               Center(
