@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:instagram/model/user.dart';
+import 'package:instagram/screens/profile_into_screen.dart';
 
 class ProfileTabBar extends StatefulWidget {
   const ProfileTabBar({Key? key}) : super(key: key);
@@ -48,20 +49,28 @@ class _ProfileTabBarState extends State<ProfileTabBar>
   Widget tabBarView() {
     return Expanded(
       child: TabBarView(
-        controller: _tabController,
+          controller: _tabController,
           children: [
-        GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3, crossAxisSpacing: 10, mainAxisSpacing: 10),
-            itemBuilder: (context, index) {
-              return Image.asset("${tabView[index].backgroundImage}");
-            },
-          itemCount: 6,
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) =>ProfileIntoScreen(),));
+              },
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10),
+                itemBuilder: (context, index) {
+                  return Image.asset("${tabView[index].backgroundImage}");
+                },
+                itemCount: 6,
+              ),
             ),
             Container(
               color: Colors.red,
             )
-      ]),
+          ]),
     );
   }
 }
