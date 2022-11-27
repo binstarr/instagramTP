@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram/screens/loading_screen.dart';
+import 'package:instagram/screens/login_screen.dart';
 
 import 'constrants.dart';
 import 'model/user_info.dart';
@@ -24,7 +25,9 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(color: Colors.black87),
         ),
       ),
-      home: LoadingScreen(),
+      home: LoginScreen(),
+
+      // LoadingScreen(),
     );
   }
 }
