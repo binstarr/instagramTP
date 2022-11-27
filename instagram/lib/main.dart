@@ -27,8 +27,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home:
-     // LoadingScreen(),
-      LoginScreen(),
-    );
+      LoadingScreen(),
+       );
   }
 }

@@ -24,12 +24,16 @@ class ShopMainScreen extends StatelessWidget {
     return AppBar(
       elevation: 0.0,
       backgroundColor: Colors.white,
-      title: Text(
-        "Shop",
-        style: TextStyle(
-          fontSize: 25,
-          fontWeight: FontWeight.bold,
-          color: Colors.black,
+      leadingWidth: 100,
+      leading: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10),
+        child: Text(
+          "Shop",
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
         ),
       ),
       actions: [

@@ -30,7 +30,7 @@ class _MainScreenState extends State<MainScreen> {
           HomeScreen(dm: "2"),
           SearchScreen(),
           ShopMainScreen(),
-          MyProfile(user: user[1]),
+          MyProfile(user: MyApp.me),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

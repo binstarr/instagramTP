@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram/screens/login_screen.dart';
 import 'main_screen.dart';
 
 class LoadingScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class LoadingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 3), (){
       Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return MainScreen();
+        return LoginScreen();
       }));
 
     });

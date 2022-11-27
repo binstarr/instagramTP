@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:instagram/components/profile_info.dart';
@@ -32,26 +34,32 @@ class _MyProfileState extends State<MyProfile> {
   AppBar _buildProfileAppBar() {
     return AppBar(
       backgroundColor: Colors.white,
-      title: Row(
-          children: [SizedBox(
-            child: Text(
-              super.widget.user.name,
-              style: TextStyle(
-                  fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
+      titleSpacing: 0,
+      elevation: 0,
+      leadingWidth: 300,
+      leading: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+        child: Row(
+            children: [
+               Text(
+                super.widget.user.name,
+                style: TextStyle(
+                    fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
+
             ),
-          ),
-            InkWell(
-              onTap: () => print("클릭"),
-              child: SizedBox(
-                width: 20,
-                height: 20,
-                child: CircleAvatar(
-                  backgroundColor: Colors.red,
-                  child: Text("..."),
+              InkWell(
+                onTap: () => print("클릭"),
+                child: SizedBox(
+                  width: 20,
+                  height: 20,
+                  child: CircleAvatar(
+                    backgroundColor: Colors.red,
+                    child: Text("..."),
+                  ),
                 ),
               ),
-            ),
-          ]),
+            ]),
+      ),
       actions: [
 
         SizedBox(
