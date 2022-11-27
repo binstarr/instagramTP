@@ -61,15 +61,6 @@ class _UploadScreenState extends State<UploadScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        leading: GestureDetector(
-          onTap: () {
-            Get.back;
-          },
-          child: Padding(
-            padding: EdgeInsets.all(7),
-            child: Icon(FontAwesomeIcons.x),
-          ),
-        ),
         title: const Text(
           "New Post",
           style: TextStyle(

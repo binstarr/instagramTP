@@ -12,7 +12,6 @@ class DmScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        centerTitle: true,
         title: Text("Direct Message", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.black87)),
         actions: [
           Icon(FontAwesomeIcons.videoCamera),
