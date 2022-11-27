@@ -2,6 +2,7 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:photo_manager/photo_manager.dart';
 
 class UploadScreen extends StatefulWidget {
@@ -61,7 +62,9 @@ class _UploadScreenState extends State<UploadScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Get.back;
+          },
           child: Padding(
             padding: EdgeInsets.all(7),
             child: Icon(FontAwesomeIcons.x),

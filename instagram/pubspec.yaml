@@ -41,6 +41,7 @@ dependencies:
   intl: ^0.17.0
   webview_flutter: ^3.0.4
   url_launcher: ^6.1.7
+  get: ^4.6.5
   photo_manager: ^2.5.1+1
 
 dev_dependencies:
