@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:instagram/components/shopping_list.dart';
+import 'package:instagram/components/shop_list_detail.dart';
 import 'package:instagram/model/shop.dart';
+import 'package:instagram/screens/shop_webview_screen.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+import '../constrants.dart';
 import '../model/shop_item.dart';
-import '../screens/shop_list_detail.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ShoppingListDetail extends StatelessWidget {
   const ShoppingListDetail({Key? key, required this.shopNum}) : super(key: key);
@@ -14,31 +17,40 @@ class ShoppingListDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     var shopSelected;
     var itemNum;
+    var shopUrl;
 
     if (shopNum == 0) {
       shopSelected = thufSeoulItems;
       itemNum = 0;
+      shopUrl = thufSeoulUrl;
     } else if (shopNum == 7) {
       shopSelected = thufSeoulItems;
       itemNum = 1;
+      shopUrl = thufSeoulUrl;
     } else if (shopNum == 1) {
       shopSelected = hookaItems;
       itemNum = 0;
+      shopUrl = hookaUrl;
     } else if (shopNum == 3) {
       shopSelected = hookaItems;
       itemNum = 1;
+      shopUrl = hookaUrl;
     } else if (shopNum == 4) {
       shopSelected = hookaItems;
       itemNum = 2;
+      shopUrl = hookaUrl;
     } else if (shopNum == 2) {
       shopSelected = horientalbeforemoonItmes;
       itemNum = 0;
+      shopUrl = moonUrl;
     } else if (shopNum == 5) {
       shopSelected = horientalbeforemoonItmes;
       itemNum = 2;
+      shopUrl = moonUrl;
     } else if (shopNum == 6) {
       shopSelected = horientalbeforemoonItmes;
       itemNum = 1;
+      shopUrl = moonUrl;
     }
     return Column(
       children: [
@@ -80,7 +92,10 @@ class ShoppingListDetail extends StatelessWidget {
               SizedBox(height: 15),
               InkWell(
                 onTap: () {
-                  print("웹사이트에서 보기 눌러짐");
+                  print("Shop URL : $shopUrl");
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return ShopWebviewScreen(url: shopUrl);
+                  }));
                 },
                 child: Container(
                   alignment: Alignment.center,
@@ -237,5 +252,13 @@ class ShoppingListDetail extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+launchUrl(var url) async {
+  if (await canLaunchUrl(Uri.parse(url))) {
+    await launchUrl(Uri.parse(url));
+  } else {
+    print("연결실패");
   }
 }
