@@ -217,7 +217,7 @@ class ListCardState extends State<ListCard> {
       context: context,
       builder: (BuildContext context) {
         return SizedBox(
-          height: 400,
+          height: MediaQuery.of(context).size.height * 0.5,
           child: Column(
               children: [TextField(
                 cursorColor: Colors.black87,

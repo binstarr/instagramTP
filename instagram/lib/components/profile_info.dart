@@ -21,10 +21,9 @@ class ProfileInfo extends StatelessWidget {
           Row(
             children: [
               _profileImage(),
-              SizedBox(
-                width: 50,
-              ),
+              Spacer(),
               _profileInfo(),
+              SizedBox(width: MediaQuery.of(context).size.width *0.1,)
             ],
           ),
           SizedBox(height: 20,),
