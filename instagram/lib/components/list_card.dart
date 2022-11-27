@@ -128,7 +128,7 @@ class ListCardState extends State<ListCard> {
   }
 
   _secondRow(){
-
+    var alreadySaved = false;
     return Row(
       children: [
         Padding(
@@ -136,16 +136,20 @@ class ListCardState extends State<ListCard> {
           child: InkWell(
               onTap: (){
                 setState(() {
-
-                  //ttttttttttt
-                  Icon(FontAwesomeIcons.solidHeart, color: Colors.red,);
-
-
+                  if(alreadySaved == true){
+                    Icon(FontAwesomeIcons.heart, color: Colors.red,);
+                    widget.likes + 1;
+                   }else if (alreadySaved == false){
+                    alreadySaved = true;
+                    widget.likes - 1;
+                  }
                 });
-
               },
-              child: Icon(FontAwesomeIcons.heart)),
-        ),
+              child: Icon(
+                  alreadySaved ? FontAwesomeIcons.solidHeart : FontAwesomeIcons.heart,
+                  color: alreadySaved ? Colors.red : null,
+    ),
+    ),),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: InkWell(

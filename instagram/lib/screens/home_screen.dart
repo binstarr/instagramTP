@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:instagram/components/list_card.dart';
+import 'package:instagram/screens/upload_screen.dart';
 
 
 import '../components/story.dart';
@@ -23,7 +24,13 @@ class _HomeScreenState extends State<HomeScreen> {
         leadingWidth: 120,
         leading: Image.network("${urlPrefix1}insta.png", width: 120,),
         actions: [
-          Icon(FontAwesomeIcons.squarePlus),
+          InkWell(
+              onTap: (){
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) =>
+                    UploadScreen()));
+              },
+              child: Icon(FontAwesomeIcons.squarePlus)),
           SizedBox(width: 10,),
           Icon(FontAwesomeIcons.heart),
           SizedBox(width: 10,),
