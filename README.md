@@ -19,9 +19,7 @@ models(샘플 데이터)를 만들어 코드 간소화 & 코드 재활용을 하
 ![new](https://user-images.githubusercontent.com/113653130/213917380-f3bac4ab-4075-4a4c-9260-e756e74240e0.png)
 
 ## ⚙️ 사용 기술 및 라이브러리
-
-- Dart
-- Flutter
+ <img src="https://img.shields.io/badge/Dart-009B14?style=flat&logo=Dart&logoColor=white"/> <img src="https://img.shields.io/badge/Flutter-0042D8?style=flat&logo=Flutter&logoColor=white"/>
 - font_awesome ( 다양한 아이콘 라이브러리)
 - webview (web page 불러오는 라이브러리)
 - photo_manager ( 휴대폰 카메라와 연결 라이브러리 )
