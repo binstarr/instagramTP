@@ -31,9 +31,9 @@ models(샘플 데이터)를 만들어 코드 간소화 & 코드 재활용을 하
 <table>
   <tr>
     <td>
-    <img src="https://user-images.githubusercontent.com/113653130/213918092-8d5f9803-faeb-4a81-81bd-2d32b7373987.gif" height="450px" width="300px">
-    <img src="https://user-images.githubusercontent.com/113653130/213918094-cbcf0807-d88f-49f0-b778-db1116a06ea4.gif" height="450px" width="300px">
-    <img src="https://user-images.githubusercontent.com/113653130/213918098-9b58668f-bdd9-4fa2-843e-695ff55c82fb.gif" height="450px" width="300px">
+    <img src="https://user-images.githubusercontent.com/113653130/213918092-8d5f9803-faeb-4a81-81bd-2d32b7373987.gif" height="350px" width="250px">
+    <img src="https://user-images.githubusercontent.com/113653130/213918094-cbcf0807-d88f-49f0-b778-db1116a06ea4.gif" height="350px" width="250px">
+    <img src="https://user-images.githubusercontent.com/113653130/213918098-9b58668f-bdd9-4fa2-843e-695ff55c82fb.gif" height="350px" width="250px">
    </td>
   <tr>
 </table>
@@ -43,9 +43,9 @@ models(샘플 데이터)를 만들어 코드 간소화 & 코드 재활용을 하
 <table>
   <tr>
     <td>
-    <img src="https://user-images.githubusercontent.com/113653130/213918102-d8266a9c-2044-4948-a3c5-ad57f5f1d933.gif" height="450px" width="300px">
-    <img src="https://user-images.githubusercontent.com/113653130/213918104-e94c3b3e-79d5-448e-abf5-e5e0b51e7a14.gif" height="450px" width="300px">
-    <img src="https://user-images.githubusercontent.com/113653130/213918106-0753e038-e828-46e8-bd46-bcb258845b63.gif" height="450px" width="300px">
+    <img src="https://user-images.githubusercontent.com/113653130/213918102-d8266a9c-2044-4948-a3c5-ad57f5f1d933.gif" height="350px" width="250px">
+    <img src="https://user-images.githubusercontent.com/113653130/213918104-e94c3b3e-79d5-448e-abf5-e5e0b51e7a14.gif" height="350px" width="250px">
+    <img src="https://user-images.githubusercontent.com/113653130/213918106-0753e038-e828-46e8-bd46-bcb258845b63.gif" height="350px" width="250px">
    </td>
   <tr>
 </table>
@@ -55,9 +55,9 @@ models(샘플 데이터)를 만들어 코드 간소화 & 코드 재활용을 하
 <table>
   <tr>
     <td>
-    <img src="https://user-images.githubusercontent.com/113653130/213918107-b2efc527-9203-41cc-8de8-acdf3685c46d.gif" height="450px" width="300px">
-    <img src="https://user-images.githubusercontent.com/113653130/213918108-d39c23d6-a154-490a-8652-a5212bc5e24a.gif" height="450px" width="300px">
-    <img src="https://user-images.githubusercontent.com/113653130/213918112-52c65eeb-7734-4e55-bbbe-b1908aa112fa.gif" height="450px" width="300px">
+    <img src="https://user-images.githubusercontent.com/113653130/213918107-b2efc527-9203-41cc-8de8-acdf3685c46d.gif" height="350px" width="250px">
+    <img src="https://user-images.githubusercontent.com/113653130/213918108-d39c23d6-a154-490a-8652-a5212bc5e24a.gif" height="350px" width="250px">
+    <img src="https://user-images.githubusercontent.com/113653130/213918112-52c65eeb-7734-4e55-bbbe-b1908aa112fa.gif" height="350px" width="250px">
    </td>
   <tr>
 </table>
@@ -66,8 +66,8 @@ models(샘플 데이터)를 만들어 코드 간소화 & 코드 재활용을 하
 <table>
   <tr>
     <td>
-    <img src="https://user-images.githubusercontent.com/113653130/213918126-e0580244-31b3-4542-82d0-92b47efc4d31.gif" height="450px" width="300px">
-    <img src="https://user-images.githubusercontent.com/113653130/213918115-4bd277db-19c1-419a-b5ea-ef8b8919a31d.gif" height="450px" width="300px">
+    <img src="https://user-images.githubusercontent.com/113653130/213918126-e0580244-31b3-4542-82d0-92b47efc4d31.gif" height="350px" width="250px">
+    <img src="https://user-images.githubusercontent.com/113653130/213918115-4bd277db-19c1-419a-b5ea-ef8b8919a31d.gif" height="350px" width="250px">
    </td>
   <tr>
 </table>
